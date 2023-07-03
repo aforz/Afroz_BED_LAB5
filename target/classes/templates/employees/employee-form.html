@@ -24,7 +24,7 @@
 		<span style="margin-left: 10px">Employee Management System</span></h4>
 
 		<div class="container" style="border:0.5px solid lightgray; width:40%">
-			<p class="h4 mb-4" style="text-align:center; margin-top: 10px">Create/Update Employee</p>
+			<p class="h4 mb-4" style="text-align:center; margin-top: 10px" th:text="${heading}"></p>
 
 			<form action="#" th:action="@{/employees/save}"
 				th:object="${employee}" method="POST" style="margin-left: 60px">

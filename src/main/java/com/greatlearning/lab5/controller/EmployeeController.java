@@ -31,6 +31,8 @@ public class EmployeeController {
 	@GetMapping("/add")
 	public String addEmployee(Model theModel) {
 		Employee employee = new Employee();
+		String heading = "Create New Employee";
+		theModel.addAttribute("heading", heading);
 		theModel.addAttribute("employee", employee);
 		return "employees/employee-form";
 	}
@@ -38,6 +40,8 @@ public class EmployeeController {
 	@PostMapping("/update")
 	public String updateEmployee(@RequestParam("id") int id, Model theModel) {
 		Employee employee = employeeService.findById(id);
+		String heading = "Update Employee";
+		theModel.addAttribute("heading", heading);
 		theModel.addAttribute("employee", employee);
 		return "employees/employee-form";
 	}
